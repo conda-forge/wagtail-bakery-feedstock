@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About wagtail-bakery
 ====================
 
@@ -20,8 +16,15 @@ build Wagtail pages specifically, mixed content is possible!
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/wagtail-bakery-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/wagtail-bakery-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5856&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/wagtail-bakery-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================

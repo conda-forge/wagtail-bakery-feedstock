@@ -1,6 +1,6 @@
 {% set name = "wagtail-bakery" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "46dd6d31f2305094945eb3a9ee7fc8dbeca778fe13cd96b2f245a22467412390" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "e7e2b11b903d1d3afec1f8b7af6a59ebf135f11efb9a4d433987574dd2d52409" %}
 
 
 package:
