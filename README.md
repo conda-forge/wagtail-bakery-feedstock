@@ -5,9 +5,13 @@ Home: https://github.com/moorinteractive/wagtail-bakery
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wagtail-bakery-feedstock/blob/master/LICENSE.txt)
 
 Summary: A set of helpers for baking your Django Wagtail site out as flat files
+
+Development: https://github.com/moorinteractive/wagtail-bakery
+
+Documentation: hhttps://wagtail-bakery.readthedocs.io
 
 Wagtail-bakery is built on top of Django bakery. Wagtail-bakery is not limited to
 build Wagtail pages specifically, mixed content is possible!
@@ -69,7 +73,7 @@ A feedstock is made up of a conda recipe (the instructions on what and how to bu
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
+and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
 [Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
