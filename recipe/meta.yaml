@@ -1,6 +1,6 @@
 {% set name = "wagtail-bakery" %}
-{% set version = "0.4.0" %}
-{% set sha256 = "e7e2b11b903d1d3afec1f8b7af6a59ebf135f11efb9a4d433987574dd2d52409" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "b48422f3a48b85a719b4f963989f236d7c50f31c030ca75e7cd914fe078557f1" %}
 
 
 package:
@@ -18,7 +18,7 @@ build:
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
@@ -35,8 +35,8 @@ about:
   home: https://github.com/moorinteractive/wagtail-bakery
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: 'A set of helpers for baking your Django Wagtail site out as flat files'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  summary: A set of helpers for baking your Django Wagtail site out as flat files
   description: |
     Wagtail-bakery is built on top of Django bakery. Wagtail-bakery is not limited to 
     build Wagtail pages specifically, mixed content is possible!
