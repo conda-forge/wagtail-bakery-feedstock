@@ -1,38 +1,38 @@
 {% set name = "wagtail-bakery" %}
-{% set version = "0.4.0" %}
-{% set sha256 = "e7e2b11b903d1d3afec1f8b7af6a59ebf135f11efb9a4d433987574dd2d52409" %}
-
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail-bakery-{{ version }}.tar.gz
+  sha256: 6ed7bfca032ef69daa51267ea820d4a9780620783559122684f92569c1467ebc
 
 build:
-  number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.8
+    - pip
   run:
-    - python
-    - django-bakery ==0.9.2
-    - six >=1.10.0
-    - wagtail >=1.6
+    - python >=3.8
+    - django-bakery >=0.13.1,<0.14.0
+    - wagtail >=4.1
 
 test:
   imports:
     - wagtailbakery
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/moorinteractive/wagtail-bakery
+  home: https://github.com/wagtail-nest/wagtail-bakery/
   license: MIT
   license_family: MIT
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
@@ -41,9 +41,10 @@ about:
     Wagtail-bakery is built on top of Django bakery. Wagtail-bakery is not limited to 
     build Wagtail pages specifically, mixed content is possible!
   doc_url: hhttps://wagtail-bakery.readthedocs.io
-  dev_url: https://github.com/moorinteractive/wagtail-bakery
+  dev_url: https://github.com/wagtail-nest/wagtail-bakery/
 
 extra:
   recipe-maintainers:
     - cshaley
+    - rxm7706
     - sannykr
